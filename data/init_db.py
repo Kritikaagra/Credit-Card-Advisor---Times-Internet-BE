@@ -3,8 +3,8 @@ import json
 import os
 import sys
 
-DB_PATH = "cards.db"
-JSON_PATH = "./creditCards.json"
+DB_PATH = "data/cards.db"
+JSON_PATH = "data/creditCards.json"
 
 def initialize_database():
     try:
