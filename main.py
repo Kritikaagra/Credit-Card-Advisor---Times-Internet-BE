@@ -166,24 +166,6 @@ async def root():
         ],
     }
 
-# @app.get("/debug/{session_id}")
-# async def debug_session(session_id: str):
-#     try:
-#         config = {"configurable": {"thread_id": session_id}}
-#         state = agent_executor.get_state(config)
-#         return {
-#             "session_id": session_id,
-#             "message_count": len(state.values.get("messages", [])),
-#             "messages": [
-#                 {
-#                     "type": msg.type,
-#                     "content": msg.content[:100] + "..." if len(msg.content) > 100 else msg.content
-#                 }
-#                 for msg in state.values.get("messages", [])
-#             ]
-#         }
-#     except Exception as e:
-#         return {"error": str(e)}
 
 if __name__ == "__main__":
     import uvicorn
